@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0066)file:///C:/Users/heike/Downloads/spielergebnisse_mobil_fix_12.html -->
+<!-- saved from url=(0066)file:///C:/Users/heike/Downloads/spielergebnisse_mobil_fix_15.html -->
 <html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -256,7 +256,11 @@ function delScore(pi, si) { saveSnapshot(); ['scores', 'score_types', 'score_dat
 function refreshAvg(pi) { const aw = document.querySelector(`.avg-cell[data-pi="${pi}"]`); if (!aw) return; const a = calcAvg(P[pi].scores), cnt = P[pi].scores.filter(s => s !== '').length; aw.innerHTML = a !== null ? `<span class="avg-val">${fmt(a)}</span><span class="avg-rnds">${cnt} Runde${cnt !== 1 ? 'n' : ''}</span>` : `<span class="avg-empty">—</span>`; }
 
 // ── DROPDOWN ──────────────────────────────────────────
-const closeDd = () => { if (activeDd) { activeDd.remove(); activeDd = null; } };
+const removeKbdSpacer = () => {
+  const sp = document.getElementById('mobil-tastatur-spacer');
+  if (sp && sp.parentNode) sp.parentNode.removeChild(sp);
+};
+const closeDd = () => { if (activeDd) { activeDd.remove(); activeDd = null; } removeKbdSpacer(); };
 
 function showTypeDd(pi, si, wrap) {
   closeDd(); closePopup();
@@ -297,7 +301,7 @@ function showTypeDd(pi, si, wrap) {
 }
 
 // ── POPUP ─────────────────────────────────────────────
-const closePopup = () => { if (activePopup) { activePopup.remove(); activePopup = null; } };
+const closePopup = () => { if (activePopup) { activePopup.remove(); activePopup = null; } removeKbdSpacer(); };
 
 function showMetaPopup(pi, si, wrap, savedRect) {
   closePopup();
@@ -326,13 +330,14 @@ function showMetaPopup(pi, si, wrap, savedRect) {
   document.body.appendChild(popup);
   activePopup = popup;
 
-  // *** FIX: Position robust setzen, savedRect bevorzugen ***
+  // Position robust setzen, savedRect bevorzugen.
+  // positionElSmart entscheidet selbst, ob das Popup über oder unter dem
+  // Kästchen sitzt – je nachdem wo mehr Platz ist.
   positionElSmart(popup, wrap, 160, 144, savedRect);
 
-  // Fokus erst nach Positionierung, sonst springt iOS.
-  // Auf Touch-Geräten lassen wir den Auto-Fokus weg – sonst öffnet sich
-  // die Tastatur sofort und schiebt das Popup beim Repositionieren herum.
-  // Der Nutzer tippt einfach das gewünschte Feld an.
+  // Auf Touch-Geräten KEIN Auto-Fokus – sonst Tastatur sofort = Popup hüpft.
+  // Der Nutzer tippt selbst das gewünschte Feld an, und dann ist das
+  // Kästchen bereits gut positioniert.
   if (!IS_TOUCH) {
     setTimeout(() => iDate.focus({ preventScroll: true }), 50);
   }
@@ -361,29 +366,16 @@ function positionElSmart(el, wrap, elH, elW, savedRect) {
   // Sofort einmal positionieren (Initial-Schätzung mit gemessener Größe)
   doPosition();
 
-  // Auf Touch-Geräten: nochmal positionieren, sobald sich der Viewport
-  // durch ein- oder ausblendende Tastatur ändert.
-  // ABER: Sobald der Nutzer in ein Eingabefeld INNERHALB des Popups tippt
-  // (z. B. das Datum-Feld), schalten wir die Reposition-Listener AB.
-  // Sonst würde das Popup beim Aufgehen der Tastatur springen.
+  // Auf Touch-Geräten: bei Tastatur-Öffnen oder -Schließen neu positionieren.
   if (IS_TOUCH && window.visualViewport) {
-    let active = true;
-    const reposition = () => { if (active) doPosition(); };
+    const reposition = () => doPosition();
     window.visualViewport.addEventListener('resize', reposition);
     window.visualViewport.addEventListener('scroll', reposition);
-
-    // Wenn ein Element IM Popup den Fokus bekommt → Listener einfrieren.
-    const onFocusIn = (e) => {
-      if (el.contains(e.target)) active = false;
-    };
-    document.addEventListener('focusin', onFocusIn);
-
-    // Cleanup: wenn das El entfernt wird, Listener abräumen
+    // Cleanup
     const observer = new MutationObserver(() => {
       if (!document.body.contains(el)) {
         window.visualViewport.removeEventListener('resize', reposition);
         window.visualViewport.removeEventListener('scroll', reposition);
-        document.removeEventListener('focusin', onFocusIn);
         observer.disconnect();
       }
     });
@@ -406,16 +398,32 @@ function positionElSmart(el, wrap, elH, elW, savedRect) {
     if (!r) return;
 
     // Wenn das Kästchen außerhalb des sichtbaren Viewports liegt (z. B. von
-    // der Tastatur überdeckt), scrollen wir es in die Mitte des Viewports.
-    const wrapTopAbs = r.top;       // relativ zum Layout-Viewport
-    const wrapBottomAbs = r.bottom;
+    // der Tastatur überdeckt), scrollen wir es zurück in den sichtbaren Bereich.
     const visTop = vvTop;
     const visBottom = vvTop + vvH;
-    if (wrapBottomAbs > visBottom - 10 || wrapTopAbs < visTop + 10) {
+    if (r.bottom > visBottom - 10 || r.top < visTop + 10) {
       if (wrap && wrap.scrollIntoView) {
         wrap.scrollIntoView({ block: 'center', behavior: 'instant' in HTMLElement.prototype ? 'auto' : 'smooth' });
-        // Nach Scroll neue Rect holen
-        r = wrap.getBoundingClientRect();
+        let r2 = wrap.getBoundingClientRect();
+        // Wenn scrollIntoView nichts bewirkt hat (Kästchen am Seitenende):
+        // einen unsichtbaren Spacer am Seitenende anhängen, dann manuell
+        // scrollen. Der Spacer wird beim Schließen des Popups entfernt.
+        if (r2.bottom > visBottom - 10) {
+          if (!document.getElementById('mobil-tastatur-spacer')) {
+            const sp = document.createElement('div');
+            sp.id = 'mobil-tastatur-spacer';
+            sp.style.cssText = 'height:60vh;width:1px;pointer-events:none;';
+            document.body.appendChild(sp);
+          }
+          // Kästchen so scrollen, dass es knapp über dem unteren Viewport-Rand sitzt
+          const desiredBottom = visBottom - 10;
+          const delta = r2.bottom - desiredBottom;
+          if (delta > 0) {
+            window.scrollBy(0, delta);
+            r2 = wrap.getBoundingClientRect();
+          }
+        }
+        r = r2;
       }
     }
 
