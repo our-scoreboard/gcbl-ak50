@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)file:///C:/Users/heike/Downloads/spielergebnisse_final_8.html -->
+<!-- saved from url=(0065)file:///C:/Users/heike/Downloads/spielergebnisse_mobil_fix_3.html -->
 <html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Spielrundenergebnisse 2026</title>
-<link href="./Spielrundenergebnisse 2026_files/css2" rel="stylesheet">
+<link href="file:///C:/Users/heike/Downloads/Spielrundenergebnisse%202026_files/css2" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 *:focus { outline: none !important; -webkit-tap-highlight-color: transparent; }
@@ -30,12 +30,12 @@ html, body { min-height: 100vh; background: #315d3a; font-family: 'DM Sans', san
 .prow { display: flex; align-items: center; padding: 7px 14px; gap: 6px; border-bottom: 1px solid rgba(0,0,0,.1); }
 .prow:last-child { border-bottom: none; }
 .p-nr { display: none; }
-.p-name { width: 52px; flex-shrink: 0; height: 26px; background: transparent; border: none; border-bottom: 1.5px solid rgba(255,255,255,.5); color: #fff; font-size: 12px; font-weight: 500; font-family: 'DM Sans', sans-serif; padding: 0 3px; outline: none; position: sticky; left: 0; z-index: 2; }
+.p-name { width: 52px; flex-shrink: 0; height: 26px; background: transparent; border: none; border-bottom: 1.5px solid rgba(255,255,255,.5); color: #fff; font-size: 12px; font-weight: 500; font-family: 'DM Sans', sans-serif; padding: 0 3px; outline: none; position: sticky; left: 0; z-index: 2; touch-action: manipulation; }
 .prow.r1 .p-name { background: #315d3a; }
 .prow.r2 .p-name { background: #4f955d; }
 .p-name::placeholder { color: rgba(255,255,255,.3); }
 .p-name:focus { border-bottom-color: #fff; }
-.scores { display: flex; align-items: center; gap: 3px; flex: 1; min-width: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.scores { display: flex; align-items: center; gap: 3px; flex: 1; min-width: 0; overflow-x: auto; overflow-y: visible; -webkit-overflow-scrolling: touch; scrollbar-width: none; touch-action: pan-x; padding-right: 12px; scroll-padding-right: 50px; overscroll-behavior-x: contain; }
 .scores::-webkit-scrollbar { display: none; }
 /* Scroll arrows - laptop only */
 .sarrow { width: 14px; height: 28px; flex-shrink: 0; border: none; background: rgba(255,255,255,.08); color: rgba(255,255,255,.4); font-size: 10px; cursor: pointer; border-radius: 3px; display: none; align-items: center; justify-content: center; padding: 0; transition: all .15s; }
@@ -130,7 +130,7 @@ html, body { min-height: 100vh; background: #315d3a; font-family: 'DM Sans', san
     <button class="abtn sort-btn sort-desktop" id="sort-avg" onclick="sortBy(&#39;avg&#39;)">Ø aufsteigend</button>
     <button class="abtn sort-btn sort-desktop" id="sort-count" onclick="sortBy(&#39;count&#39;)">Anzahl Runden</button>
     <div class="sync-info">
-      <span class="count" id="cnt">14 Teilnehmerinnen</span>
+      <span class="count" id="cnt">15 Teilnehmerinnen</span>
       <span class="sync-status ok" id="syncStatus">● Gespeichert ✓</span>
     </div>
   </div>
@@ -148,7 +148,7 @@ html, body { min-height: 100vh; background: #315d3a; font-family: 'DM Sans', san
   <div class="ch" style="width:64px;text-align:right;margin-right:14px">Ø Schnitt</div>
 </div>
 
-<div id="rows"><div class="prow r1"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="0"><span class="avg-empty">—</span></div><button class="btn-del">✕</button></div><div class="prow r2"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-1-0"><input type="number" class="sbox sc-1" placeholder="···"><span class="type-badge tbadge-1-0 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">14.04.</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-1-1"><input type="number" class="sbox sc-1" placeholder="···"><span class="type-badge tbadge-1-1 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span><br><span style="color:rgba(255,255,255,.8)">18.04.</span><br><span style="color:rgba(255,255,255,.8)">Breisgau</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-1-2"><input type="number" class="sbox sc-1" placeholder="···"><span class="type-badge tbadge-1-2 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">21.04.</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-1-3"><input type="number" class="sbox sc-1" placeholder="···"><span class="type-badge tbadge-1-3 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">22.04.</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-1-4"><input type="number" class="sbox sc-1" placeholder="···"><span class="type-badge tbadge-1-4 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">25.04.</span><br><span style="color:rgba(255,255,255,.8)">Gcbl</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="1"><span class="avg-val">96</span><span class="avg-rnds">5 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r1"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-2-0"><input type="number" class="sbox sc-2" placeholder="···"><span class="type-badge tbadge-2-0 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span><br><span style="color:rgba(255,255,255,.8)">Breigau</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-2-1"><input type="number" class="sbox sc-2" placeholder="···"><span class="type-badge tbadge-2-1 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-2-2"><input type="number" class="sbox sc-2" placeholder="···"><span class="type-badge tbadge-2-2 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="2"><span class="avg-val">84</span><span class="avg-rnds">3 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r2"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-3-0"><input type="number" class="sbox sc-3" placeholder="···"><span class="type-badge tbadge-3-0 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">17.04.26</span><br><span style="color:rgba(255,255,255,.8)">Golf de Bi</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-3-1"><input type="number" class="sbox sc-3" placeholder="···"><span class="type-badge tbadge-3-1 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">18.04.26</span><br><span style="color:rgba(255,255,255,.8)">GC Souffle</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-3-2"><input type="number" class="sbox sc-3" placeholder="···"><span class="type-badge tbadge-3-2 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">250425</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="3"><span class="avg-val">95</span><span class="avg-rnds">3 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r1"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-4-0"><input type="number" class="sbox sc-4" placeholder="···"><span class="type-badge tbadge-4-0 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span><br><span style="color:rgba(255,255,255,.8)">18.04.20</span><br><span style="color:rgba(255,255,255,.8)">Breisgau</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="4"><span class="avg-val">88</span><span class="avg-rnds">1 Runde</span></div><button class="btn-del">✕</button></div><div class="prow r2"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-5-0"><input type="number" class="sbox sc-5" placeholder="···"><span class="type-badge tbadge-5-0 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">21.4.26</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-5-1"><input type="number" class="sbox sc-5" placeholder="···"><span class="type-badge tbadge-5-1 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">23.6.26</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-5-2"><input type="number" class="sbox sc-5" placeholder="···"><span class="type-badge tbadge-5-2 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-5-3"><input type="number" class="sbox sc-5" placeholder="···"><span class="type-badge tbadge-5-3 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="5"><span class="avg-val">98</span><span class="avg-rnds">4 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r1"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-6-0"><input type="number" class="sbox sc-6" placeholder="···"><span class="type-badge tbadge-6-0 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-6-1"><input type="number" class="sbox sc-6" placeholder="···"><span class="type-badge tbadge-6-1 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="6"><span class="avg-val">96</span><span class="avg-rnds">2 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r2"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-7-0"><input type="number" class="sbox sc-7" placeholder="···"><span class="type-badge tbadge-7-0 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span><br><span style="color:rgba(255,255,255,.8)">18.04.26</span><br><span style="color:rgba(255,255,255,.8)">Breisgau</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-7-1"><input type="number" class="sbox sc-7" placeholder="···"><span class="type-badge tbadge-7-1 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">22.04.26</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-7-2"><input type="number" class="sbox sc-7" placeholder="···"><span class="type-badge tbadge-7-2 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">25.04.26</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="7"><span class="avg-val">103</span><span class="avg-rnds">3 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r1"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-8-0"><input type="number" class="sbox sc-8" placeholder="···"><span class="type-badge tbadge-8-0" title="Typ ändern"></span><div class="score-tooltip"><span style="color:rgba(255,255,255,.3)">Keine Details</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-8-1"><input type="number" class="sbox sc-8" placeholder="···"><span class="type-badge tbadge-8-1" title="Typ ändern"></span><div class="score-tooltip"><span style="color:rgba(255,255,255,.3)">Keine Details</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-8-2"><input type="number" class="sbox sc-8" placeholder="···"><span class="type-badge tbadge-8-2 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">24.04.26</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="8"><span class="avg-val">100</span><span class="avg-rnds">3 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r2"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="9"><span class="avg-empty">—</span></div><button class="btn-del">✕</button></div><div class="prow r1"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="10"><span class="avg-empty">—</span></div><button class="btn-del">✕</button></div><div class="prow r2"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="11"><span class="avg-empty">—</span></div><button class="btn-del">✕</button></div><div class="prow r1"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-12-0"><input type="number" class="sbox sc-12" placeholder="···"><span class="type-badge tbadge-12-0 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">19.04.20</span><br><span style="color:rgba(255,255,255,.8)">Liebenzell</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="12"><span class="avg-val">97</span><span class="avg-rnds">1 Runde</span></div><button class="btn-del">✕</button></div><div class="prow r2"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: visible;">‹</button><div class="scores"><div class="score-wrap swrap-13-0"><input type="number" class="sbox sc-13" placeholder="···"><span class="type-badge tbadge-13-0 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">10.04.</span><br><span style="color:rgba(255,255,255,.8)">Testplatz</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-13-1"><input type="number" class="sbox sc-13" placeholder="···"><span class="type-badge tbadge-13-1 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">10.04.</span><br><span style="color:rgba(255,255,255,.8)">Testplatz</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-13-2"><input type="number" class="sbox sc-13" placeholder="···"><span class="type-badge tbadge-13-2 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span><br><span style="color:rgba(255,255,255,.8)">16.04.</span><br><span style="color:rgba(255,255,255,.8)">Ligaplatz</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-13-3"><input type="number" class="sbox sc-13" placeholder="···"><span class="type-badge tbadge-13-3 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">04.04.</span><br><span style="color:rgba(255,255,255,.8)">jjjj</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-13-4"><input type="number" class="sbox sc-13" placeholder="···"><span class="type-badge tbadge-13-4 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">25.04.</span><br><span style="color:rgba(255,255,255,.8)">xyz</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-13-5"><input type="number" class="sbox sc-13" placeholder="···"><span class="type-badge tbadge-13-5 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-13-6"><input type="number" class="sbox sc-13" placeholder="···"><span class="type-badge tbadge-13-6 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">05.04</span><br><span style="color:rgba(255,255,255,.8)">jllk</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-13-7"><input type="number" class="sbox sc-13" placeholder="···"><span class="type-badge tbadge-13-7 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">08.08</span><br><span style="color:rgba(255,255,255,.8)">888888</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-13-8"><input type="number" class="sbox sc-13" placeholder="···"><span class="type-badge tbadge-13-8 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-13-9"><input type="number" class="sbox sc-13" placeholder="···"><span class="type-badge tbadge-13-9 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">14.04.</span><br><span style="color:rgba(255,255,255,.8)">llll</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-13-10" style=""><input type="number" class="sbox sc-13" placeholder="···"><span class="type-badge tbadge-13-10 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">26.04.</span><br><span style="color:rgba(255,255,255,.8)">sfsaf</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-13-11"><input type="number" class="sbox sc-13" placeholder="···"><span class="type-badge tbadge-13-11 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span><br><span style="color:rgba(255,255,255,.8)">04.04</span><br><span style="color:rgba(255,255,255,.8)">dfgdag</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="13"><span class="avg-val">94</span><span class="avg-rnds">12 Runden</span></div><button class="btn-del">✕</button></div></div>
+<div id="rows"><div class="prow r1" data-pi="0" data-pkey="id-cc77a44b-6d8c-4fb8-81a3-73d28da08201"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-0-0"><input type="number" class="sbox sc-0" placeholder="···"><span class="type-badge tbadge-0-0 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">12.04.26</span><br><span style="color:rgba(255,255,255,.8)">Gcbl</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="0"><span class="avg-val">105</span><span class="avg-rnds">1 Runde</span></div><button class="btn-del">✕</button></div><div class="prow r2" data-pi="1" data-pkey="id-eca600b6-87d7-4f39-a9a4-c8a81b7bb5e7"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="1"><span class="avg-empty">—</span></div><button class="btn-del">✕</button></div><div class="prow r1" data-pi="2" data-pkey="id-73eb7d66-dd10-436d-88d7-c8e9363bd1a4"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-2-0"><input type="number" class="sbox sc-2" placeholder="···"><span class="type-badge tbadge-2-0 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">14.04.</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-2-1"><input type="number" class="sbox sc-2" placeholder="···"><span class="type-badge tbadge-2-1 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span><br><span style="color:rgba(255,255,255,.8)">18.04.</span><br><span style="color:rgba(255,255,255,.8)">Breisgau</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-2-2"><input type="number" class="sbox sc-2" placeholder="···"><span class="type-badge tbadge-2-2 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">21.04.</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-2-3"><input type="number" class="sbox sc-2" placeholder="···"><span class="type-badge tbadge-2-3 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">22.04.</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-2-4"><input type="number" class="sbox sc-2" placeholder="···"><span class="type-badge tbadge-2-4 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">25.04.</span><br><span style="color:rgba(255,255,255,.8)">Gcbl</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="2"><span class="avg-val">96</span><span class="avg-rnds">5 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r2" data-pi="3" data-pkey="id-fc430030-bd74-4d0f-bfeb-24304e04ae73"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-3-0"><input type="number" class="sbox sc-3" placeholder="···"><span class="type-badge tbadge-3-0 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span><br><span style="color:rgba(255,255,255,.8)">Breigau</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-3-1"><input type="number" class="sbox sc-3" placeholder="···"><span class="type-badge tbadge-3-1 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-3-2"><input type="number" class="sbox sc-3" placeholder="···"><span class="type-badge tbadge-3-2 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="3"><span class="avg-val">84</span><span class="avg-rnds">3 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r1" data-pi="4" data-pkey="id-89a76f64-1a61-44a4-8ac9-fe45aabe3902"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-4-0"><input type="number" class="sbox sc-4" placeholder="···"><span class="type-badge tbadge-4-0 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">17.04.26</span><br><span style="color:rgba(255,255,255,.8)">Golf de Bi</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-4-1"><input type="number" class="sbox sc-4" placeholder="···"><span class="type-badge tbadge-4-1 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">18.04.26</span><br><span style="color:rgba(255,255,255,.8)">GC Souffle</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-4-2"><input type="number" class="sbox sc-4" placeholder="···"><span class="type-badge tbadge-4-2 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">250425</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="4"><span class="avg-val">95</span><span class="avg-rnds">3 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r2" data-pi="5" data-pkey="id-dcb76bc6-12f7-4176-b342-7df66330861d"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-5-0"><input type="number" class="sbox sc-5" placeholder="···"><span class="type-badge tbadge-5-0 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span><br><span style="color:rgba(255,255,255,.8)">18.04.20</span><br><span style="color:rgba(255,255,255,.8)">Breisgau</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="5"><span class="avg-val">88</span><span class="avg-rnds">1 Runde</span></div><button class="btn-del">✕</button></div><div class="prow r1" data-pi="6" data-pkey="id-30bf4be5-55b2-4790-a3ee-dbfc9b09a8a4"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-6-0"><input type="number" class="sbox sc-6" placeholder="···"><span class="type-badge tbadge-6-0 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">21.4.26</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-6-1"><input type="number" class="sbox sc-6" placeholder="···"><span class="type-badge tbadge-6-1 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">23.6.26</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-6-2"><input type="number" class="sbox sc-6" placeholder="···"><span class="type-badge tbadge-6-2 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-6-3"><input type="number" class="sbox sc-6" placeholder="···"><span class="type-badge tbadge-6-3 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="6"><span class="avg-val">98</span><span class="avg-rnds">4 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r2" data-pi="7" data-pkey="id-9f42a88f-c45d-42fb-b332-1d7a6d56599c"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-7-0"><input type="number" class="sbox sc-7" placeholder="···"><span class="type-badge tbadge-7-0 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-7-1"><input type="number" class="sbox sc-7" placeholder="···"><span class="type-badge tbadge-7-1 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="7"><span class="avg-val">96</span><span class="avg-rnds">2 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r1" data-pi="8" data-pkey="id-58a8d49d-ba56-4ee4-8e4f-b92f44626b51"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-8-0"><input type="number" class="sbox sc-8" placeholder="···"><span class="type-badge tbadge-8-0 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span><br><span style="color:rgba(255,255,255,.8)">18.04.26</span><br><span style="color:rgba(255,255,255,.8)">Breisgau</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-8-1"><input type="number" class="sbox sc-8" placeholder="···"><span class="type-badge tbadge-8-1 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">22.04.26</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-8-2"><input type="number" class="sbox sc-8" placeholder="···"><span class="type-badge tbadge-8-2 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">25.04.26</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="8"><span class="avg-val">103</span><span class="avg-rnds">3 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r2" data-pi="9" data-pkey="id-fd40b70d-c077-4026-8374-eb465ddad0a4"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-9-0"><input type="number" class="sbox sc-9" placeholder="···"><span class="type-badge tbadge-9-0" title="Typ ändern"></span><div class="score-tooltip"><span style="color:rgba(255,255,255,.3)">Keine Details</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-9-1"><input type="number" class="sbox sc-9" placeholder="···"><span class="type-badge tbadge-9-1" title="Typ ändern"></span><div class="score-tooltip"><span style="color:rgba(255,255,255,.3)">Keine Details</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-9-2"><input type="number" class="sbox sc-9" placeholder="···"><span class="type-badge tbadge-9-2 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">24.04.26</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-9-3"><input type="number" class="sbox sc-9" placeholder="···"><span class="type-badge tbadge-9-3 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">25.04.26</span><br><span style="color:rgba(255,255,255,.8)">GCBL</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="9"><span class="avg-val">100</span><span class="avg-rnds">4 Runden</span></div><button class="btn-del">✕</button></div><div class="prow r1" data-pi="10" data-pkey="id-1cdeba3a-cf92-4795-90ca-cce0a8c28167"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="10"><span class="avg-empty">—</span></div><button class="btn-del">✕</button></div><div class="prow r2" data-pi="11" data-pkey="id-669d3dcd-3af8-4f7a-b73b-7334acc9be14"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="11"><span class="avg-empty">—</span></div><button class="btn-del">✕</button></div><div class="prow r1" data-pi="12" data-pkey="id-94ae3ce6-7e23-4286-b30e-bd07c024ff2c"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="12"><span class="avg-empty">—</span></div><button class="btn-del">✕</button></div><div class="prow r2" data-pi="13" data-pkey="id-a553aa94-f14e-4f18-8cec-5f90cea95031"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: hidden;">‹</button><div class="scores"><div class="score-wrap swrap-13-0"><input type="number" class="sbox sc-13" placeholder="···"><span class="type-badge tbadge-13-0 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">19.04.20</span><br><span style="color:rgba(255,255,255,.8)">Liebenzell</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="13"><span class="avg-val">97</span><span class="avg-rnds">1 Runde</span></div><button class="btn-del">✕</button></div><div class="prow r1" data-pi="14" data-pkey="id-d87b3952-c605-4932-bf8a-38a732113c66"><div class="p-nr"></div><input type="text" class="p-name" placeholder="Name…" maxlength="7"><button class="sarrow" style="visibility: visible;">‹</button><div class="scores"><div class="score-wrap swrap-14-0"><input type="number" class="sbox sc-14" placeholder="···"><span class="type-badge tbadge-14-0 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">10.04.</span><br><span style="color:rgba(255,255,255,.8)">Testplatz</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-14-1"><input type="number" class="sbox sc-14" placeholder="···"><span class="type-badge tbadge-14-1 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">10.04.</span><br><span style="color:rgba(255,255,255,.8)">Testplatz</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-14-2"><input type="number" class="sbox sc-14" placeholder="···"><span class="type-badge tbadge-14-2 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span><br><span style="color:rgba(255,255,255,.8)">16.04.</span><br><span style="color:rgba(255,255,255,.8)">Ligaplatz</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-14-3"><input type="number" class="sbox sc-14" placeholder="···"><span class="type-badge tbadge-14-3 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">04.04.</span><br><span style="color:rgba(255,255,255,.8)">jjjj</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-14-4"><input type="number" class="sbox sc-14" placeholder="···"><span class="type-badge tbadge-14-4 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">25.04.</span><br><span style="color:rgba(255,255,255,.8)">xyz</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-14-5"><input type="number" class="sbox sc-14" placeholder="···"><span class="type-badge tbadge-14-5 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-14-6" style=""><input type="number" class="sbox sc-14" placeholder="···"><span class="type-badge tbadge-14-6 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">05.04</span><br><span style="color:rgba(255,255,255,.8)">jllk</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-14-7"><input type="number" class="sbox sc-14" placeholder="···"><span class="type-badge tbadge-14-7 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">08.08</span><br><span style="color:rgba(255,255,255,.8)">888888</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-14-8"><input type="number" class="sbox sc-14" placeholder="···"><span class="type-badge tbadge-14-8 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-14-9"><input type="number" class="sbox sc-14" placeholder="···"><span class="type-badge tbadge-14-9 tb-T" title="Typ ändern">T</span><div class="score-tooltip"><span style="color:#f5c842;font-weight:700">Turnier</span><br><span style="color:rgba(255,255,255,.8)">14.04.</span><br><span style="color:rgba(255,255,255,.8)">llll</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-14-10"><input type="number" class="sbox sc-14" placeholder="···"><span class="type-badge tbadge-14-10 tb-P" title="Typ ändern">P</span><div class="score-tooltip"><span style="color:#7ec8e3;font-weight:700">Privatrunde</span><br><span style="color:rgba(255,255,255,.8)">26.04.</span><br><span style="color:rgba(255,255,255,.8)">sfsaf</span></div><span class="sdel">×</span></div><div class="score-wrap swrap-14-11"><input type="number" class="sbox sc-14" placeholder="···"><span class="type-badge tbadge-14-11 tb-L" title="Typ ändern">L</span><div class="score-tooltip"><span style="color:#f4a0c0;font-weight:700">Ligaspiel</span><br><span style="color:rgba(255,255,255,.8)">04.04</span><br><span style="color:rgba(255,255,255,.8)">dfgdag</span></div><span class="sdel">×</span></div><button class="btn-plus">+</button></div><button class="sarrow" style="visibility: hidden;">›</button><div class="p-avg avg-cell" data-pi="14"><span class="avg-val">94</span><span class="avg-rnds">12 Runden</span></div><button class="btn-del">✕</button></div></div>
 <div class="foot"><button class="badd" onclick="addPlayer()">+ Spieler hinzufügen</button></div>
 <div id="toast" class="">Gespeichert ✓</div>
 
@@ -159,6 +159,9 @@ const API = `${SUPABASE_URL}/rest/v1/spieler`;
 const HDR = { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}`, 'Prefer': 'return=representation' };
 const TYPES = [{ key: 'P', label: 'P – Privatrunde' }, { key: 'T', label: 'T – Turnier' }, { key: 'L', label: 'L – Ligaspiel' }];
 const TC = { P: '#7ec8e3', T: '#f5c842', L: '#f4a0c0' };
+
+// Detect touch device (mobile/tablet)
+const IS_TOUCH = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
 let P = [], saveTimer = null, activeDd = null, activePopup = null;
 let undoHistory = [], MAX_UNDO = 20;
@@ -205,7 +208,20 @@ async function saveAll() {
 // ── PLAYERS ───────────────────────────────────────────
 function addPlayer() { if (P.length >= 30) return; P.push(emptyPlayer()); render(); setTimeout(() => { const a = document.querySelectorAll('.p-name'); a[a.length - 1]?.focus(); }, 30); }
 async function remPlayer(i) { if (!confirm('Spieler "' + P[i].name + '" wirklich löschen?')) return; saveSnapshot(); if (P[i].id) { try { await dbDelete(P[i].id); } catch { showToast('Fehler'); return; } } P.splice(i, 1); while (P.length < 6) P.push(emptyPlayer()); render(); }
-function addScore(pi) { P[pi].scores.push(''); P[pi].score_types.push(''); P[pi].score_dates.push(''); P[pi].score_courses.push(''); render(); setTimeout(() => { const a = document.querySelectorAll(`.sc-${pi}`); a[a.length - 1]?.focus(); }, 30); }
+function addScore(pi) {
+  P[pi].scores.push(''); P[pi].score_types.push(''); P[pi].score_dates.push(''); P[pi].score_courses.push('');
+  render();
+  setTimeout(() => {
+    const a = document.querySelectorAll(`.sc-${pi}`);
+    const last = a[a.length - 1];
+    if (last) {
+      // Scroll-Container der Reihe finden und ganz nach rechts scrollen
+      const scoresEl = last.closest('.scores');
+      if (scoresEl) scoresEl.scrollLeft = scoresEl.scrollWidth;
+      last.focus();
+    }
+  }, 50);
+}
 function delScore(pi, si) { saveSnapshot(); ['scores', 'score_types', 'score_dates', 'score_courses'].forEach(k => P[pi][k].splice(si, 1)); render(); scheduleSave(); }
 function refreshAvg(pi) { const aw = document.querySelector(`.avg-cell[data-pi="${pi}"]`); if (!aw) return; const a = calcAvg(P[pi].scores), cnt = P[pi].scores.filter(s => s !== '').length; aw.innerHTML = a !== null ? `<span class="avg-val">${fmt(a)}</span><span class="avg-rnds">${cnt} Runde${cnt !== 1 ? 'n' : ''}</span>` : `<span class="avg-empty">—</span>`; }
 
@@ -229,16 +245,14 @@ function showTypeDd(pi, si, wrap) {
       e.preventDefault(); e.stopPropagation();
       saveSnapshot();
       P[pi].score_types[si] = t.key;
-      // Save wrap position BEFORE closing dd and render
       const wrapRect = wrap.getBoundingClientRect();
       closeDd();
       render();
-      // Re-apply gold and open popup using saved position
       requestAnimationFrame(() => requestAnimationFrame(() => {
         const w = document.querySelector(`.swrap-${pi}-${si}`);
         if (!w) return;
         applyGold(w);
-        showMetaPopupAtRect(pi, si, w, wrapRect);
+        showMetaPopup(pi, si, w, wrapRect);
       }));
       scheduleSave();
     };
@@ -248,15 +262,12 @@ function showTypeDd(pi, si, wrap) {
   });
   document.body.appendChild(dd);
   activeDd = dd;
-  positionEl(dd, wrap, 120, 144);
+  // *** FIX: Auf Touch-Geräten Tastatur ausblenden + warten, bis Viewport stabil ist ***
+  positionElSmart(dd, wrap, 120, 144);
 }
 
 // ── POPUP ─────────────────────────────────────────────
 const closePopup = () => { if (activePopup) { activePopup.remove(); activePopup = null; } };
-
-function showMetaPopupAtRect(pi, si, wrap, rect) {
-  showMetaPopup(pi, si, wrap, rect);
-}
 
 function showMetaPopup(pi, si, wrap, savedRect) {
   closePopup();
@@ -272,7 +283,6 @@ function showMetaPopup(pi, si, wrap, savedRect) {
 
   const doClose = (save) => {
     if (save) { saveSnapshot(); P[pi].score_dates[si] = iDate.value.trim(); P[pi].score_courses[si] = iCourse.value.trim(); const tt = wrap.querySelector('.score-tooltip'); if (tt) tt.innerHTML = buildTooltipHTML(P[pi].score_types[si] || '', P[pi].score_dates[si], P[pi].score_courses[si]); scheduleSave(); }
-    // Reset gold on the wrap
     resetGold(wrap);
     closePopup();
   };
@@ -285,34 +295,128 @@ function showMetaPopup(pi, si, wrap, savedRect) {
   popup.addEventListener('click', e => e.stopPropagation());
   document.body.appendChild(popup);
   activePopup = popup;
-  if (savedRect) {
-    // Use saved rect for accurate positioning after render()
-    const popH = 160, popW = 144;
-    const vvTop = window.visualViewport ? window.visualViewport.offsetTop : 0;
-    const vvH = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-    const spaceBelow = vvH - (savedRect.bottom - vvTop);
-    const top = spaceBelow >= popH + 10 ? savedRect.bottom + 4 : savedRect.top - popH - 6;
-    const idealLeft = savedRect.left + (savedRect.width / 2) - (popW / 2);
-    popup.style.top = Math.max(vvTop + 4, Math.min(top, vvTop + vvH - popH - 4)) + 'px';
-    popup.style.left = Math.max(4, Math.min(idealLeft, window.innerWidth - popW - 4)) + 'px';
-  } else {
-    positionEl(popup, wrap, 160, 144);
+
+  // *** FIX: Position robust setzen, savedRect bevorzugen ***
+  positionElSmart(popup, wrap, 160, 144, savedRect);
+
+  // Fokus erst nach Positionierung, sonst springt iOS.
+  // Auf Touch-Geräten lassen wir den Auto-Fokus weg – sonst öffnet sich
+  // die Tastatur sofort und schiebt das Popup beim Repositionieren herum.
+  // Der Nutzer tippt einfach das gewünschte Feld an.
+  if (!IS_TOUCH) {
+    setTimeout(() => iDate.focus({ preventScroll: true }), 50);
   }
-  iDate.focus({ preventScroll: true });
 }
 
-// ── POSITION HELPER ─────────────────────────────────────
-function positionEl(el, wrap, elH, elW) {
-  // Use visualViewport if available (mobile with keyboard)
-  const vvTop = window.visualViewport ? window.visualViewport.offsetTop : 0;
-  const vvH = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-  const r = wrap.getBoundingClientRect();
-  const spaceBelow = vvH - (r.bottom - vvTop);
-  const top = spaceBelow >= elH + 10 ? r.bottom + 4 : r.top - elH - 6;
-  // Center popup horizontally on the wrap, keep within screen
-  const idealLeft = r.left + (r.width / 2) - (elW / 2);
-  el.style.top = Math.max(vvTop + 4, Math.min(top, vvTop + vvH - elH - 4)) + 'px';
-  el.style.left = Math.max(4, Math.min(idealLeft, window.innerWidth - elW - 4)) + 'px';
+// ── POSITION HELPER (NEU: robust für Mobil + Tastatur) ─
+/**
+ * Positioniert ein Popup direkt über oder unter dem ausgelösten Element.
+ * - Bevorzugt UNTERHALB (weil bei aktiver Tastatur oben oft kein Platz ist)
+ * - Fällt auf OBERHALB zurück, wenn unten nicht genug Platz ist
+ * - Berücksichtigt visualViewport (= sichtbarer Bereich abzgl. Tastatur)
+ * - Scrollt das ausgelöste Element bei Bedarf in Sicht
+ */
+function positionElSmart(el, wrap, elH, elW, savedRect) {
+  // Statt hartcodierter Höhe/Breite die TATSÄCHLICHE Größe des gerenderten
+  // Elements verwenden. So passt die Positionierung exakt, egal wie der
+  // Inhalt ausfällt.
+  const measure = () => {
+    const rect = el.getBoundingClientRect();
+    return {
+      h: rect.height || elH,
+      w: rect.width || elW
+    };
+  };
+
+  // Sofort einmal positionieren (Initial-Schätzung mit gemessener Größe)
+  doPosition();
+
+  // Auf Touch-Geräten: nochmal positionieren, sobald sich der Viewport
+  // durch ein- oder ausblendende Tastatur ändert
+  if (IS_TOUCH && window.visualViewport) {
+    const reposition = () => doPosition();
+    window.visualViewport.addEventListener('resize', reposition);
+    window.visualViewport.addEventListener('scroll', reposition);
+    // Cleanup: wenn das El entfernt wird, Listener abräumen
+    const observer = new MutationObserver(() => {
+      if (!document.body.contains(el)) {
+        window.visualViewport.removeEventListener('resize', reposition);
+        window.visualViewport.removeEventListener('scroll', reposition);
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
+
+  function doPosition() {
+    const m = measure();
+    const useH = m.h;
+    const useW = m.w;
+
+    const vv = window.visualViewport;
+    const vvTop = vv ? vv.offsetTop : 0;
+    const vvLeft = vv ? vv.offsetLeft : 0;
+    const vvW = vv ? vv.width : window.innerWidth;
+    const vvH = vv ? vv.height : window.innerHeight;
+
+    // Aktuelle Position des ausgelösten Kästchens
+    let r = wrap ? wrap.getBoundingClientRect() : savedRect;
+    if (!r) return;
+
+    // Wenn das Kästchen außerhalb des sichtbaren Viewports liegt (z. B. von
+    // der Tastatur überdeckt), scrollen wir es in die Mitte des Viewports.
+    const wrapTopAbs = r.top;       // relativ zum Layout-Viewport
+    const wrapBottomAbs = r.bottom;
+    const visTop = vvTop;
+    const visBottom = vvTop + vvH;
+    if (wrapBottomAbs > visBottom - 10 || wrapTopAbs < visTop + 10) {
+      if (wrap && wrap.scrollIntoView) {
+        wrap.scrollIntoView({ block: 'center', behavior: 'instant' in HTMLElement.prototype ? 'auto' : 'smooth' });
+        // Nach Scroll neue Rect holen
+        r = wrap.getBoundingClientRect();
+      }
+    }
+
+    // Platz unterhalb / oberhalb des Kästchens innerhalb des sichtbaren Viewports
+    const spaceBelow = (vvTop + vvH) - r.bottom;
+    const spaceAbove = r.top - vvTop;
+
+    let top;
+    const GAP = 4; // Abstand zwischen Popup und Kästchen
+
+    // Bevorzugung: direkt UNTER dem Kästchen
+    if (spaceBelow >= useH + GAP + 4) {
+      top = r.bottom + GAP;
+    } else if (spaceAbove >= useH + GAP + 4) {
+      // Sonst direkt DARÜBER
+      top = r.top - useH - GAP;
+    } else {
+      // Wenn beides knapp ist: trotzdem direkt ans Kästchen andocken,
+      // und zwar dorthin, wo MEHR Platz ist. So bleibt das Popup nah am
+      // ausgelösten Element und springt nicht zur Bildschirmmitte.
+      if (spaceBelow >= spaceAbove) {
+        top = r.bottom + GAP;
+      } else {
+        top = r.top - useH - GAP;
+      }
+    }
+
+    // Horizontal: am Kästchen zentrieren, aber im sichtbaren Bereich halten
+    const idealLeft = r.left + (r.width / 2) - (useW / 2);
+    const minLeft = vvLeft + 4;
+    const maxLeft = vvLeft + vvW - useW - 4;
+    const left = Math.max(minLeft, Math.min(idealLeft, maxLeft));
+
+    // Vertikal in den sichtbaren Bereich klemmen, aber nur soweit nötig.
+    // Am Rand andocken ist OK – Hauptsache nah am Kästchen.
+    const minTop = vvTop + 2;
+    const maxTop = vvTop + vvH - useH - 2;
+    if (top < minTop) top = minTop;
+    if (top > maxTop) top = maxTop;
+
+    el.style.top = top + 'px';
+    el.style.left = left + 'px';
+  }
 }
 
 // ── GOLD BORDER ─────────────────────────────────────────
@@ -330,7 +434,7 @@ function resetGold(wrap) {
   wrap.style.boxShadow = '';
 }
 
-// Close dd/popup on outside click - use mousedown so it fires before blur
+// Close dd/popup on outside click
 const handleOutsideInteraction = e => {
   if (activeDd && activeDd.contains(e.target)) return;
   if (activePopup && activePopup.contains(e.target)) return;
@@ -355,18 +459,24 @@ function sortBy(mode) {
 
 // ── RENDER ────────────────────────────────────────────
 function render() {
-  // Save scroll positions before rebuild
+  // Scroll-Positionen pro Spielerin merken (per ID, fällt sonst auf Index zurück)
   const scrollPositions = {};
-  document.querySelectorAll('.scores').forEach((sc, i) => { scrollPositions[i] = sc.scrollLeft; });
+  document.querySelectorAll('.prow').forEach(row => {
+    const sc = row.querySelector('.scores');
+    if (!sc) return;
+    const key = row.dataset.pkey || row.dataset.pi;
+    if (key !== undefined) scrollPositions[key] = sc.scrollLeft;
+  });
 
   const cont = document.getElementById('rows'); cont.innerHTML = ''; updateCount();
   P.forEach((p, pi) => {
     const row = document.createElement('div'); row.className = 'prow ' + (pi % 2 === 0 ? 'r1' : 'r2');
+    row.dataset.pi = pi;
+    row.dataset.pkey = p.id ? ('id-' + p.id) : ('name-' + (p.name || ('_empty_' + pi)));
     const nr = document.createElement('div'); nr.className = 'p-nr'; row.appendChild(nr);
     const ni = document.createElement('input'); ni.type = 'text'; ni.className = 'p-name'; ni.placeholder = 'Name…'; ni.value = p.name; ni.maxLength = 7;
     ni.oninput = e => { P[pi].name = e.target.value; updateCount(); scheduleSave(); }; row.appendChild(ni);
 
-    // Scores
     const arL = document.createElement('button'); arL.className = 'sarrow'; arL.textContent = '‹'; arL.onclick = () => sc.scrollBy({ left: -100, behavior: 'smooth' });
     const sc = document.createElement('div'); sc.className = 'scores';
     const arR = document.createElement('button'); arR.className = 'sarrow'; arR.textContent = '›'; arR.onclick = () => sc.scrollBy({ left: 100, behavior: 'smooth' });
@@ -383,8 +493,6 @@ function render() {
       const inp = document.createElement('input'); inp.type = 'number'; inp.className = `sbox sc-${pi}`; inp.placeholder = '···';
       if (s !== '') inp.value = s;
 
-      // ── KEY: proven working pattern from original code ──
-      // wrap.onclick stops propagation so document.mousedown doesn't close dd
       wrap.onclick = e => e.stopPropagation();
 
       inp.oninput = e => {
@@ -392,25 +500,44 @@ function render() {
         if (digits.length > 3) e.target.value = v = (neg ? '-' : '') + digits.slice(0, 3);
         if (!inp._snapDone) { saveSnapshot(); inp._snapDone = true; setTimeout(() => inp._snapDone = false, 1000); }
         P[pi].scores[si] = e.target.value; refreshAvg(pi); scheduleSave();
-        // Mobile: auto-trigger after 3 digits
-        if (digits.length === 3) setTimeout(() => showTypeDd(pi, si, wrap), 300);
+        // Mobile: nach 3 Ziffern Tastatur schließen + Dropdown öffnen
+        if (digits.length === 3) {
+          if (IS_TOUCH) {
+            // *** FIX: Tastatur explizit ausblenden, dann Dropdown öffnen ***
+            inp.blur();
+            // Nach blur und Tastatur-Animation positionieren (~300-400ms)
+            setTimeout(() => showTypeDd(pi, si, wrap), 350);
+          } else {
+            setTimeout(() => showTypeDd(pi, si, wrap), 300);
+          }
+        }
       };
 
       inp.onfocus = () => applyGold(wrap);
 
-      // Enter key → always show type dropdown
       inp.onkeydown = e => {
-        // 'Enter', 'Go', 'Done' on mobile keyboards
         if (e.key === 'Enter' || e.key === 'Go' || e.keyCode === 13) {
           e.preventDefault();
-          if (P[pi].scores[si]) showTypeDd(pi, si, wrap);
+          if (P[pi].scores[si]) {
+            if (IS_TOUCH) {
+              inp.blur();
+              setTimeout(() => showTypeDd(pi, si, wrap), 350);
+            } else {
+              showTypeDd(pi, si, wrap);
+            }
+          }
         }
       };
 
-      // onblur: show dropdown after typing (with delay for mousedown on dd options)
+      // onblur: nur auf Desktop automatisch öffnen.
+      // Auf Touch-Geräten triggern wir das Dropdown bewusst NICHT bei blur,
+      // weil dann oft die Tastatur noch im Übergang ist und das Popup
+      // an der falschen Stelle landet. Das Öffnen erfolgt entweder durch
+      // 3-stellige Eingabe (siehe oninput) oder durch explizites Tippen
+      // auf das Badge.
       inp.onblur = () => {
         if (!P[pi].scores[si]) { resetGold(wrap); return; }
-        // Always show type dropdown on blur (covers mobile Done/Go button)
+        if (IS_TOUCH) return; // Auf Mobil: Dropdown nur über Eingabe oder Badge
         setTimeout(() => {
           if (!activeDd && !activePopup) showTypeDd(pi, si, wrap);
         }, 100);
@@ -418,16 +545,26 @@ function render() {
 
       wrap.appendChild(inp);
 
-      // Badge
       const bt = p.score_types[si] || '';
       const badge = document.createElement('span'); badge.className = `type-badge tbadge-${pi}-${si}` + (bt ? ` tb-${bt}` : ''); badge.textContent = bt; badge.title = 'Typ ändern';
-      badge.onclick = e => { e.stopPropagation(); applyGold(wrap); showTypeDd(pi, si, wrap); }; wrap.appendChild(badge);
+      // Badge-Klick: Tastatur erst schließen (falls offen), dann Dropdown öffnen
+      badge.onclick = e => {
+        e.stopPropagation();
+        applyGold(wrap);
+        if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+        setTimeout(() => showTypeDd(pi, si, wrap), IS_TOUCH ? 300 : 0);
+      };
+      wrap.appendChild(badge);
 
-      // Tooltip
       const tt = document.createElement('div'); tt.className = 'score-tooltip'; tt.innerHTML = buildTooltipHTML(bt, p.score_dates[si] || '', p.score_courses[si] || '');
-      tt.addEventListener('mousedown', e => { e.stopPropagation(); applyGold(wrap); showMetaPopup(pi, si, wrap); }); wrap.appendChild(tt);
+      tt.addEventListener('mousedown', e => {
+        e.stopPropagation();
+        applyGold(wrap);
+        if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+        setTimeout(() => showMetaPopup(pi, si, wrap), IS_TOUCH ? 300 : 0);
+      });
+      wrap.appendChild(tt);
 
-      // Delete
       const sdel = document.createElement('span'); sdel.className = 'sdel'; sdel.textContent = '×';
       sdel.onclick = e => { e.stopPropagation(); delScore(pi, si); }; wrap.appendChild(sdel);
 
@@ -447,13 +584,15 @@ function render() {
     cont.appendChild(row);
   });
 
-  // Restore scroll positions - double rAF ensures DOM is fully painted on mobile
   requestAnimationFrame(() => requestAnimationFrame(() => {
-    document.querySelectorAll('.scores').forEach((sc, i) => {
-      if (scrollPositions[i] > 0) {
-        sc.scrollLeft = scrollPositions[i];
-        // Force it again after a tiny delay for stubborn mobile browsers
-        setTimeout(() => { sc.scrollLeft = scrollPositions[i]; }, 50);
+    document.querySelectorAll('.prow').forEach(row => {
+      const sc = row.querySelector('.scores');
+      if (!sc) return;
+      const key = row.dataset.pkey;
+      const pos = scrollPositions[key];
+      if (pos > 0) {
+        sc.scrollLeft = pos;
+        setTimeout(() => { sc.scrollLeft = pos; }, 50);
       }
     });
     document.querySelectorAll('.scores').forEach(sc => sc.dispatchEvent(new Event('scroll')));
@@ -462,6 +601,7 @@ function render() {
 
 loadAll();
 </script>
+
 
 
 </body></html>
